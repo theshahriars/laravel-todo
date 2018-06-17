@@ -1,7 +1,11 @@
-## Laravel SB Starter
+## Simple Laravel ToDo Application
 
-Laravel starter pack. [SB Admin 2](https://blackrockdigital.github.io/startbootstrap-sb-admin-2/pages/index.html) admin panel is integrated on this package. 
-
+- Create todo item
+- View todo item
+- Edit todo item
+- Delete todo item
+- Change status or mark todo item as completed or not completed
+- Set todo item duration (Start time & End time)
 - Better folder architecture.
 - Admin routes are separated.
 - Admin controllers are separated
