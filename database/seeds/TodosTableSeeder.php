@@ -19,7 +19,7 @@ class TodosTableSeeder extends Seeder
 
         $priority = array('low', 'medium', 'high');
 
-        foreach (range(1, 20) as $index)
+        foreach (range(1, 100) as $index)
         {
             Todo::create([
                 'title' => $data->sentence,

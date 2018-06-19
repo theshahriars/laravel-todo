@@ -6,7 +6,7 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
         </button>
-        <a class="navbar-brand" href="{{ url('/') }}">Laravel SB Starter</a>
+        <a class="navbar-brand" href="{{ url('/') }}">Laravel ToDo</a>
     </div>
 
     <ul class="nav navbar-top-links navbar-right">
@@ -40,17 +40,40 @@
         <div class="sidebar-nav navbar-collapse">
             <ul class="nav" id="side-menu">
                 <li class="sidebar-search">
-                    <div class="input-group custom-search-form">
-                        <input type="text" class="form-control" placeholder="Search...">
-                        <span class="input-group-btn">
-                            <button class="btn btn-default" type="button">
-                                <i class="fa fa-search"></i>
-                            </button>
-                        </span>
-                    </div>
+                    {!! Form::open(['url' => route('admin.todo.index'), 'method' => 'get']) !!}
+                        <div class="input-group custom-search-form">
+                            <input id="search" name="search" type="text" value="{{ isset($_GET['search']) ? $_GET['search'] : '' }}" class="form-control" placeholder="Search todo">
+                            <span class="input-group-btn">
+                                <button class="btn btn-default" type="submit">
+                                    <i class="fa fa-search"></i>
+                                </button>
+                            </span>
+                        </div>
+                    {!! Form::close() !!}
                 </li>
                 <li>
-                    <a href=""><i class="fa fa-dashboard fa-fw"></i> Dashboard</a>
+                    <a href="{{ route('admin.dashboard') }}"><i class="fa fa-dashboard fa-fw"></i> Dashboard</a>
+                </li>
+                <li>
+                    <a href="{{ route('admin.todo.create') }}"><i class="fa fa-edit fa-fw"></i> Create Todo</a>
+                </li>
+                <li>
+                    <a href="{{ route('admin.todo.index') }}"><i class="fa fa-navicon fa-fw"></i> Todo List</a>
+                </li>
+                <li>
+                    <a href="{{ route('admin.todo.index', ['status' => '1']) }}"><i class="fa fa-check-circle fa-fw"></i> Status: Completed</a>
+                </li>
+                <li>
+                    <a href="{{ route('admin.todo.index', ['status' => '0']) }}"><i class="fa fa-minus-circle fa-fw"></i> Status: Not Completed</a>
+                </li>
+                <li>
+                    <a href="{{ route('admin.todo.index', ['filter' => 'high']) }}"><i class="fa fa-star fa-fw"></i> Priority: High</a>
+                </li>
+                <li>
+                    <a href="{{ route('admin.todo.index', ['filter' => 'medium']) }}"><i class="fa fa-star-half-empty fa-fw"></i> Priority: Medium</a>
+                </li>
+                <li>
+                    <a href="{{ route('admin.todo.index', ['filter' => 'low']) }}"><i class="fa fa-star-o fa-fw"></i> Priority: Low</a>
                 </li>
             </ul>
         </div>

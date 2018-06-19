@@ -17,8 +17,8 @@ class CreateTodosTable extends Migration
             $table->increments('id');
             $table->string('title');
             $table->longText('description')->nullable();
-            $table->dateTime('start')->nullable();
-            $table->dateTime('end')->nullable();
+            $table->date('start')->nullable();
+            $table->date('end')->nullable();
             $table->string('priority')->default('medium')->comment('high, medium, low');
             $table->boolean('status')->default(0)->comment('1 - completed, 0 - not completed');
             $table->integer('user_id')->unsigned();

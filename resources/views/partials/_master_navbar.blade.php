@@ -6,7 +6,7 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
         </button>
-        <a class="navbar-brand" href="{{ url('/') }}">Laravel SB Starter</a>
+        <a class="navbar-brand" href="{{ url('/') }}">Laravel ToDo</a>
     </div>
 
     <ul class="nav navbar-top-links navbar-right">
