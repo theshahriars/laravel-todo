@@ -4,6 +4,7 @@
 - View todo item
 - Edit todo item
 - Delete todo item
+- Flash notification
 - Change status or mark todo item as completed or not completed
 - Set todo item duration (Start time & End time)
 - Better folder architecture.
