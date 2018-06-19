@@ -29,7 +29,7 @@
 - Migrate database & seed data
 
   ```
-  php artisan migrate:refresh --seed
+  php artisan migrate --seed
   ```
 - Run server
   
