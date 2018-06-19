@@ -1,6 +1,6 @@
 @extends('layouts.master')
 
-@section('title', 'Laravel SB Starter')
+@section('title', 'Laravel Todo')
 
 @section('content')
     <div class="jumbotron" style="margin-top: 50px;">

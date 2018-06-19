@@ -13,6 +13,7 @@
         <li>
             <a href="{{ route('login') }}">
                 <i class="fa fa-user fa-fw"></i>
+                Login / Register
             </a>
         </li>
     </ul>
