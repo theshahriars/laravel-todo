@@ -12,3 +12,29 @@
 - Admin controllers are separated
 - Account information update from dashboard
 - Account password password from dashboard
+
+## Instructions:
+
+- Project installation
+  ```
+  git clone https://github.com/theshahriars/laravel-todo.git
+  cd laravel-todo
+  composer install
+  composer update
+  cp .env.example .env
+  php artisan key:generate
+  ```
+- Create a database
+- Update .env file
+- Migrate database & seed data
+
+  ```
+  php artisan migrate:refresh --seed
+  ```
+- Run server
+  
+  ```
+  php artisan db:seed
+  ```
+  
+  
